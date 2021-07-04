@@ -26,7 +26,7 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          username: edulope
+          username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PWD }}
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.6.1
@@ -35,5 +35,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-            edulope/rotten-potatoes:${{ github.run_number }}
+            ${{ secrets.DOCKERHUB_USER }}/rotten-potatoes:${{ github.run_number }}
     
