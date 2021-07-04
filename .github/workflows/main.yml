@@ -35,6 +35,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-             ${{ secrets.DOCKERHUB_USER }}/rotten-potatoes:latest
-             ${{ secrets.DOCKERHUB_USER }}/rotten-potatoes:${{ github.run_number }}
+            edulope/rotten-potatoes:latest
+            edulope/rotten-potatoes:${{ github.run_number }}
     
