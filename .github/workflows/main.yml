@@ -35,6 +35,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-            edulope/rotten-potatoes:latest
             edulope/rotten-potatoes:${{ github.run_number }}
     
